@@ -43,6 +43,22 @@ function addTask(task) {
     }
 }
 
+// function to update local storage
+
+function updateLS() {
+    tasksElement = document.querySelectorAll('li')
+
+    const tasks = []
+
+    tasksElement.forEach(taskElement => {
+        tasks.push({
+            text: taskElement.innerText,
+            completed: taskElement.classList.contains('completed')
+        })
+    })
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+}
+
 // local storage == browser API 
 // give key such as name and a particular value
 // anything in local storage is save d as a string
@@ -53,5 +69,3 @@ function addTask(task) {
 // eg. JSON.parse(localStorage.getItem(object))
 // to remove items DO  localStorage.removeItem()
 
-
-// localStorage.setItem()
