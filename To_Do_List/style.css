@@ -29,7 +29,7 @@ h1 {
 form {
     box-shadow: 0 5px 10px rgba (0,0,0,0.1);
     max-width: 100%;
-    width: 400px;
+    width: 500px;
 }
 
 input {
@@ -43,6 +43,10 @@ input {
 
 .input::placeholder {
     color: #d5d5d5;
+}
+
+.input:focus {
+    outline-color: rgb(179, 131, 226) ;;
 }
 
 .todos {
@@ -62,5 +66,11 @@ input {
 .todos li.completed {
     color: #b6b6b6;
     text-decoration: line-through;
+}
+
+small {
+    color: #b5b5bb;
+    margin-top: 2.5rem;
+    text-align: center;
 }
 
