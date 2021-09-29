@@ -29,10 +29,14 @@ function addTask(task) {
         }
 
         taskElement.innerText = taskText
-        taskElement.addEventListener('click', () => taskElement.classList.toggle('completed'))
+        taskElement.addEventListener('click', () => {
+            taskElement.classList.toggle('completed')
+            updateLS()
+        })
         taskElement.addEventListener('contextmenu', (e) => {
             e.preventDefault()
             taskElement.remove()
+            updateLS()
         })
 
         todosUL.appendChild(taskElement)
