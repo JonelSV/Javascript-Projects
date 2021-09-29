@@ -2,10 +2,10 @@ const form = document.getElementById('form')
 const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
 
-const taskToBeDone = JSON.parse(localStorage.getItem('taskToBeDone'))
+const tasks = JSON.parse(localStorage.getItem('tasks'))
 
-if(taskToBeDone) {
-    taskToBeDone.forEach(todo => addTask(todo))
+if(tasks) {
+    tasks.forEach(todo => addTask(todo))
 }
 
 form.addEventListener('submit', (e) => {
