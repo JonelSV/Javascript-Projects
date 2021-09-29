@@ -37,4 +37,10 @@ function addTask(task) {
 // local storage == browser API 
 // give key such as name and a particular value
 // anything in local storage is save d as a string
+
+// can store ARRAYS AND OBJECTS items in local storage but has to be in JSON format and stringified
+// eg. localStorage.setItem('name', JSON.stringify(object))
+// then to get, you must JSON.parse
+// eg. JSON.parse(localStorage.getItem(object))
+// to remove items DO  localStorage.removeItem()
 localStorage.setItem()
