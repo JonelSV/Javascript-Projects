@@ -33,3 +33,8 @@ function addTask(task) {
         input.value= ''
     }
 }
+
+// local storage == browser API 
+// give key such as name and a particular value
+// anything in local storage is save d as a string
+localStorage.setItem()
