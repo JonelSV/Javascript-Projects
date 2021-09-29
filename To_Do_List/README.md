@@ -1,1 +1,1 @@
-This is a repository of my Javascript, HTML5 and CSS3 projects.
+This is To-Do List application where tasks can be created and be marked completed when done. This app also utilizes local storage so the created tasks are saved even upon refresh of the page.
