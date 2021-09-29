@@ -2,6 +2,12 @@ const form = document.getElementById('form')
 const input = document.getElementById('input')
 const todosUL = document.getElementById('todos')
 
+const taskToBeDone = JSON.parse(localStorage.getItem('taskToBeDone'))
+
+if(taskToBeDone) {
+    taskToBeDone.forEach(todo => addTask(todo))
+}
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -31,6 +37,9 @@ function addTask(task) {
 
         todosUL.appendChild(taskElement)
         input.value= ''
+
+        // update local storage
+        updateLS()
     }
 }
 
@@ -43,4 +52,6 @@ function addTask(task) {
 // then to get, you must JSON.parse
 // eg. JSON.parse(localStorage.getItem(object))
 // to remove items DO  localStorage.removeItem()
-localStorage.setItem()
+
+
+// localStorage.setItem()
